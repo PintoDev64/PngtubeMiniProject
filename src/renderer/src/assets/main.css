@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "CascadiaMono";
+  src: url("./fonts/CascadiaMono.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "header header" "main main" "footer footer";
+  grid-template-rows: 10% 80% 10%;
+}
+
+header {
+  margin: 10px 0 0 0;
+  display: flex;
+  place-content: center;
+  grid-area: header;
+  align-items: center;
+  justify-content: center;
+}
+
+header>img {
+  margin: 0 10px 0 0;
+}
+
+main {
+  display: grid;
+  grid-area: main;
+  place-content: center;
+}
+
+footer {
+  display: flex;
+  place-content: center;
+  margin: 0 0 10px 0;
+  grid-area: footer;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: footer;
+}
+
+#PreviewAvatarContent {
+  width: 850px;
+  height: 475px;
+  border: 3px solid #000000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.PreviewAvatarContent-Image {
+  width: 375px;
+  height: 375px;
+  transition: all .2s ease;
+  display: grid;
+  place-content: center;
+  font-size: xx-large;
+  font-weight: bold;
+  border: 2px dashed #838383;
+  cursor: pointer;
+}
+
+.PreviewAvatarContent-Image>img {
+  width: 375px;
+  height: 375px;
+  aspect-ratio: 1/1;
+}
+
+.PreviewAvatarContent-Image:hover {
+  background-color: #0000003f;
+  border: 2px solid #FF0088;
+}
+
+#CreateModelAditional {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+}
+
+#CreateModelNameElement {
+  font-weight: bolder;
+  font-size: xx-large;
+  color: #FF0088;
+}
+
+#CreateModelName {
+  width: 150px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: none;
+  outline: 2px solid #000000;
+  border-radius: 5px;
+  font-size: x-large;
+}
+
+#CreateModelName:focus {
+  outline: 2px solid #FF0088;
+}
+
+#CreateModelButton {
+  width: 400px;
+  height: 50px;
+  background-color: #FF0088;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: xx-large;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+#CreateModelButton:hover {
+  background-color: #2ce8f4;
+  color: #000000;
+}
