@@ -23,17 +23,18 @@
     "build": "npm run typecheck && electron-vite build",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
-    "build:win": "npm run build && electron-builder --win"
+    "build:win": "npm run build && electron-builder --win",
+    "release": "npm run build && electron-builder -p always"
   },
   "build": {
-    "appId": "com.pintogamer.pngtubestudio",
-    "productName": "PngtubeStudio",
-    "icon": "resources/pngtubestudiologo.ico",
+    "appId": "com.pintogamer.pngtubeminieditor",
+    "productName": "PngtubeMiniEditor",
+    "icon": "resources/pngminieditor.ico",
     "publish": [
       {
         "provider": "github",
         "owner": "PintoGamer64",
-        "repo": "PngtubeStudioProject"
+        "repo": "PngtubeMiniProject"
       }
     ]
   },
